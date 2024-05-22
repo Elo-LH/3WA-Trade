@@ -8,19 +8,7 @@ $query->execute();
 $products = $query->fetchAll();
 
 ?>
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3WA Trade</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <h1>3WA Trade</h1>
-    <a href="index.php">Retour aux catégories</a>
+    <a href="index.php">Retour à l'accueil</a>
    <h2><?=$param?></h2>
    <?php
 
@@ -37,5 +25,3 @@ $products = $query->fetchAll();
    }
    
    ?>
-</body>
-</html>

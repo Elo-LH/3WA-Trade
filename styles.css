@@ -1,0 +1,35 @@
+.categories-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.category-box {
+  background-color: darkcyan;
+  width: 12rem;
+  height: 5rem;
+  border-radius: 0.5rem;
+  position: relative;
+}
+.category-title {
+  width: fit-content;
+  color: white;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+a {
+  height: fit-content;
+}
+
+.product-article {
+  border-bottom: solid 1px darkcyan;
+  margin: 2rem 0;
+}
+.price {
+  font-weight: bold;
+}

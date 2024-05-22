@@ -1,0 +1,41 @@
+<?php
+
+$request = 'SELECT name, products.description, products.price FROM `products_categories` JOIN products ON products_categories.product_id = products.id JOIN categories ON products_categories.category_id = categories.id WHERE title = "' . $param .'"';
+
+
+$query = $db->prepare("$request");
+$query->execute();
+$products = $query->fetchAll();
+
+?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3WA Trade</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>3WA Trade</h1>
+    <a href="index.php">Retour aux catégories</a>
+   <h2><?=$param?></h2>
+   <?php
+
+   foreach($products as $product){
+
+?> 
+<article class="product-article">
+
+    <h3><?=$product[0]?></h3>
+    <p><?=$product[1]?></p>
+    <p class='price'><?=$product[2]?> €</p>
+</article>
+<?php
+   }
+   
+   ?>
+</body>
+</html>

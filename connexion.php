@@ -10,6 +10,4 @@ $query = $db->prepare('SELECT title from categories');
 $query->execute();
 $categories = $query->fetchAll();
 
-
-
 ?>
